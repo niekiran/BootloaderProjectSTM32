@@ -140,7 +140,8 @@ def read_serial_port(length):
 def Close_serial_port():
     pass
 def purge_serial_port():
-    pass
+    ser.reset_input_buffer()
+    
 def Write_to_serial_port(value, *length):
         data = struct.pack('>B', value)
         if (verbose_mode):
