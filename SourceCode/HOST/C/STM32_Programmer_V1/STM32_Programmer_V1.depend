@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1517470165 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\blcommands.c
+	"main.h"
+
+1517470025 e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\main.h
+	<Windows.h>
+	<stdio.h>
+	<string.h>
+	<stdint.h>
+	"WindowsSerialPort.h"
+	"LinuxSerialPort.h"
+	"OSxSerialPort.h"
+
+1517297446 e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\windowsserialport.h
+
+1517297334 e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\linuxserialport.h
+
+1517297369 e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\osxserialport.h
+
+1517470035 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\blreplyprocessing.c
+	"main.h"
+
+1517298511 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\fileops.c
+	"main.h"
+
+1517297227 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\linuxserialport.c
+	"main.h"
+	"LinuxSerialPort.h"
+
+1517470111 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\main.c
+	"main.h"
+
+1517297200 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\osxserialport.c
+	"main.h"
+	"OSxSerialPort.h"
+
+1522060862 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\utilities.c
+	"main.h"
+
+1517470044 source:e:\fastbit\courses\bootloader\code\host\stm32_programmer_v1\windowsserialport.c
+	"main.h"
+
