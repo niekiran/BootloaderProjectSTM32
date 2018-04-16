@@ -40,10 +40,9 @@ COMMAND_BL_DIS_R_W_PROTECT_LEN                      =6
 COMMAND_BL_MY_NEW_COMMAND_LEN                       =8
 
 
-verbose_mode = 0
+verbose_mode = 1
+mem_write_active =0
 
-global mem_write_active
-mem_write_active = 0
 #----------------------------- file ops----------------------------------------
 
 def calc_file_len():
@@ -146,7 +145,8 @@ def Write_to_serial_port(value, *length):
         data = struct.pack('>B', value)
         if (verbose_mode):
             value = bytearray(data)
-            print(hex(value[0]), end=' ')
+            #print("   "+hex(value[0]), end='')
+            print("   "+"0x{:02x}".format(value[0]),end=' ')
         if(mem_write_active and (not verbose_mode)):
                 print("#",end=' ')
         ser.write(data)
@@ -224,6 +224,8 @@ def process_COMMAND_BL_MEM_WRITE(length):
         print("\n   Write_status: FLASH_HAL_INV_ADDR")
     else:
         print("\n   Write_status: UNKNOWN_ERROR")
+    print("\n")
+    
 
 def process_COMMAND_BL_FLASH_MASS_ERASE(length):
     pass
@@ -446,6 +448,7 @@ def decode_menu_command_code(command):
 
         base_mem_address = input("\n   Enter the memory write address here :")
         base_mem_address = int(base_mem_address, 16)
+        global mem_write_active
         while(bytes_remaining):
             mem_write_active=1
             if(bytes_remaining >= 128):
@@ -492,7 +495,7 @@ def decode_menu_command_code(command):
 
             bytes_so_far_sent+=len_to_read
             bytes_remaining = t_len_of_file - bytes_so_far_sent
-            print("\n   bytes_so_far_sent:{0} -- bytes_remaining:{1}".format(bytes_so_far_sent,bytes_remaining)) 
+            print("\n   bytes_so_far_sent:{0} -- bytes_remaining:{1}\n".format(bytes_so_far_sent,bytes_remaining)) 
         
             ret_value = read_bootloader_reply(data_buf[1])
         mem_write_active=0
