@@ -676,7 +676,7 @@ def read_bootloader_reply(command_code):
 #----------------------------- Ask Menu implementation----------------------------------------
 
 
-name = input("Enter the Port Name of your device(Ex: COM3):").upper()
+name = input("Enter the Port Name of your device(Ex: COM3):")
 ret = 0
 ret=Serial_Port_Configuration(name)
 if(ret < 0):
