@@ -409,9 +409,10 @@ def decode_menu_command_code(command):
         data_buf[1] = COMMAND_BL_FLASH_ERASE 
         sector_num = input("\n   Enter sector number(0-7 or 0xFF) here :")
         sector_num = int(sector_num, 16)
-        if(sector_num != 0xff):
-            nsec=int(input("\n   Enter number of sectors to erase(max 8) here :"))
-        
+        if sector_num != 0xff:
+            nsec = int(input("\n Enter number of sectors to erase from selected sector (max 8) here: "))
+        else:
+            nsec = 0
         data_buf[2]= sector_num 
         data_buf[3]= nsec 
 
