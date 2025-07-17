@@ -1,0 +1,19 @@
+Reset sequences of a Microcontroller: Discussion
+=======================================================================================
+
+1) When you reset the MCU , The PC of the processor is loaded with the value 0x0000_0000
+
+2) Then processor reads the value @ memory location 0x0000_0000 in to MSP
+
+MSP = value@0x0000_0000
+MSP is a Main Stack pointer register
+That means, processor first initializes the Stack pointer register.
+
+3) After that, processor reads the value @ memory location 0x0000_0004 in to PC .
+That value is actually address of the reset handler.
+
+4) PC jumps to the reset handler.
+
+5) A reset handler is just a C or assembly function written by you to carry out any initializations required.
+
+6) From reset handler you call your main() function of the application
