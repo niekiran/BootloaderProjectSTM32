@@ -1,0 +1,9 @@
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:141:19:HAL_PWREx_EnableBkUpReg	3
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:165:19:HAL_PWREx_DisableBkUpReg	3
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:189:6:HAL_PWREx_EnableFlashPowerDown	1
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:198:6:HAL_PWREx_DisableFlashPowerDown	1
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:211:10:HAL_PWREx_GetVoltageRange	1
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:288:19:HAL_PWREx_ControlVoltageScaling	8
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:413:19:HAL_PWREx_EnableOverDrive	5
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:460:19:HAL_PWREx_DisableOverDrive	5
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:536:19:HAL_PWREx_EnterUnderDriveSTOPMode	2
